@@ -7,3 +7,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - package files
 - envbuilder lib
 - file lib
+- load lib
