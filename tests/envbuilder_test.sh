@@ -78,6 +78,7 @@ testPrepareEnvironmentRemoveAllTestDirContent()
     prepareTestEnvironment
 
     assertFalse "all content has been removed" "[ -e ${ENVBUILDER_TEMPDIR}/${path} ] && [ -e ${ENVBUILDER_TEMPDIR}/${file} ]"
+    removeTestDir
 }
 
 testPrepareEnvironment()
@@ -87,6 +88,7 @@ testPrepareEnvironment()
 
     assertTrue "FSTDOUT file exists" "[ -f ${FSTDOUT} ]"
     assertTrue "FSTDERR file exists" "[ -f ${FSTDERR} ]"
+    removeTestDir
 }
 
 ################ RUN shunit2 ################
