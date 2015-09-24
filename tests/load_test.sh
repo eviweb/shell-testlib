@@ -115,6 +115,25 @@ testLoadWithWrongPathShouldDie()
     assertSame "expected FSTDERR message" "${expected_msg}" "$(cat ${FSTDERR})"
 }
 
+testUseShouldLoadOneFileFromSrcDirectory()
+{
+    assertNull "existsOrDie function should not be loaded" "$(type -t existsOrDie)"
+    use "file"
+    assertEquals "existsOrDie function is loaded" "function" "$(type -t existsOrDie)"
+    unset existsOrDie
+}
+
+testUseShouldLoadManyFilesFromSrcDirectoryUsingAllPattern()
+{
+    unset prepareTestEnvironment
+    assertNull "prepareTestEnvironment function should not be loaded" "$(type -t prepareTestEnvironment)"
+    assertNull "existsOrDie function should not be loaded" "$(type -t existsOrDie)"
+    use "*"
+    assertEquals "prepareTestEnvironment function is loaded" "function" "$(type -t prepareTestEnvironment)"
+    assertEquals "anotherTrue function is loaded" "function" "$(type -t existsOrDie)"
+    unset existsOrDie
+}
+
 ###### Setup / Teardown #####
 oneTimeSetUp()
 {

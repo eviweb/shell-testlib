@@ -29,3 +29,14 @@ load()
         loadFile "${file}"
     done
 }
+
+# load one or many files from the shell-testlib/src directory
+# just use relative path without extension
+# @param string $1 file name or a path using the star wildcard to load all files
+use()
+{
+    local srcdir="$(dirname $(readlink -f $BASH_SOURCE))"
+    local file="${srcdir}/${1%.*}.sh"
+
+    load "${file}"
+}
