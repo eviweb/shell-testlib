@@ -50,6 +50,7 @@ testLoadFilesUsingAllPattern()
 testLoadUniqueFile()
 {
     load "${DIR}/fixtures/anotherlib.sh"
+    assertNull "simpleTrue function should not be loaded" "$(type -t simpleTrue)"
     assertEquals "anotherTrue function is loaded" "function" "$(type -t anotherTrue)"
     unset anotherTrue
 }
