@@ -4,7 +4,7 @@ res=0
 failures=0
 declare -a failing_testfiles=()
 
-for unittest in $(find ${TESTDIR} -name *_test.sh); do
+for unittest in $(find ${TESTDIR} -type f \( -iname "*_test.sh" ! -path "*/fixtures/*" \)); do
     echo "************ Run unit test ************"
     echo "test file: $unittest"
     echo "***************************************"
@@ -35,3 +35,4 @@ Test Suite FAILED (failures=${failures})
 fi
 echo ""
 exit $res
+# version: 0.2.0
