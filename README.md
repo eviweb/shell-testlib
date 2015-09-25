@@ -23,6 +23,7 @@ use "*" # this will load all the provided libraries
 Libraries
 ---------
 this package currently includes:
+* **command:** utilities to deal with external commands
 * **envbuilder:** utilities to manage your test environment _(ie. create temp directories, change `$HOME`, clean test directories...)_
 * **file:** utilities to deal with files and directories
 * **load:** loading facilities
