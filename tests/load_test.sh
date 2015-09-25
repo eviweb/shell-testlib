@@ -97,6 +97,15 @@ testLoadFilesUsingAllPattern()
     unset anotherTrue
 }
 
+testLoadFilesUsingAFilteringPattern()
+{
+    local pattern="${DIR}/fixtures/an*lib.sh"
+    load "${pattern}"
+    assertNull "simpleTrue function should not be loaded" "$(type -t simpleTrue)"
+    assertEquals "anotherTrue function is loaded" "function" "$(type -t anotherTrue)"
+    unset anotherTrue
+}
+
 testLoadUniqueFile()
 {
     load "${DIR}/fixtures/anotherlib.sh"
