@@ -8,3 +8,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - envbuilder lib
 - file lib
 - load lib
+- bootstraper
