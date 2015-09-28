@@ -59,6 +59,13 @@ testBootstrapProvidesLoadingUtilities()
     assertEquals "loadFile function is loaded" "function" "$(type -t loadFile)"
 }
 
+testFixBootstrapFunctionConflict()
+{
+    local expected="$(dirname $(readlink -f $BASH_SOURCE))"
+
+    assertSame "path should be the same" "${expected}" "$(mydir)"
+}
+
 ################ RUN shunit2 ################
 findShunit2()
 {

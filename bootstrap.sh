@@ -2,15 +2,12 @@
 # Shell Test Library Boostraper
 # provides all base necessary features to work with this library
 
-me()
+STL_Boot()
 {
-    echo "$(readlink -f $BASH_SOURCE)"
-}
+    local src="$(dirname $(readlink -f $BASH_SOURCE))/src"
 
-mydir()
-{
-    echo "$(dirname $(me))"
+    . ${src}/load.sh
 }
 
 ######################################
-. "$(mydir)/src/load.sh"
+STL_Boot

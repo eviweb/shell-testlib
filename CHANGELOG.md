@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### [Unreleased][unreleased]
 
+#### Fixed
+- bootstrap function conflict
+
 ### 0.1.1 - 2015-09-25
 #### Added
 - command lib
