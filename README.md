@@ -1,6 +1,10 @@
 Shell Testlib
 =============
-this library aims to provide some facilities to write shell unit tests.
+this library aims to provide some facilities to write shell unit tests.    
+
+##### Health status
+[![Travis CI - Build Status](https://travis-ci.org/eviweb/shell-testlib.svg)](https://travis-ci.org/eviweb/shell-testlib)
+[![Github - Last tag](https://img.shields.io/github/tag/eviweb/shell-testlib.svg)](https://github.com/eviweb/shell-testlib/tags)
 
 Installation
 ------------

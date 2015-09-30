@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### [Unreleased][unreleased]
 
+#### Added
+- project health status badges in README
+
 ### 0.1.2 - 2015-09-28
 #### Fixed
 - bootstrap function conflict
