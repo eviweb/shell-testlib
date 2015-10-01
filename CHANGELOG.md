@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### [Unreleased][unreleased]
 
+#### Fixed
+- prepareTestEnvironment remove hidden files (issue #1)
+
 #### Added
 - project health status badges in README
 

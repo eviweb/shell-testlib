@@ -54,6 +54,6 @@ initOutputs()
 # ensure sanity of the test environment
 prepareTestEnvironment()
 {
-    rm -rf ${ENVBUILDER_TEMPDIR}/*
+    find ${ENVBUILDER_TEMPDIR} ! -name '.' ! -name '..' -delete
     initOutputs
 }

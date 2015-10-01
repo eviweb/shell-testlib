@@ -141,6 +141,18 @@ testPrepareEnvironment()
     removeTestDir
 }
 
+# fix issue #1
+testPrepareEnvironmentShouldRemoveHiddenFiles()
+{
+    newTestDir
+    local hiddenfile="${ENVBUILDER_TEMPDIR}/.hiddenfile"    
+    touch "${hiddenfile}"
+    prepareTestEnvironment
+
+    assertFalse "the hiddenfile has been removed" "[ -e ${hiddenfile} ]"
+    removeTestDir
+}
+
 ################ RUN shunit2 ################
 findShunit2()
 {
